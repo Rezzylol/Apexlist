@@ -1,4 +1,4 @@
-# APEXLIST
+# Apexlist
 
 A **unified difficulty index** for hard games: one cross-game tier list that merges community “hardest clears” leaderboards (Eternal Towers of Hell, Geometry Dash, Celeste) into a single, comparable ranking.
 
@@ -51,7 +51,7 @@ Users can (when auth is wired):
 
 ## Stack and layout
 
-- **Frontend:** Static HTML/CSS/JS (manually written), served by Nginx in production. Lists, filters, tier view, and profile placeholders; can run in “mock” mode with local data to preview the UI without the rest of the stack.
+- **Frontend:** Static HTML/CSS/JS, served by Nginx in production. Lists, filters, tier view, and profile placeholders; can run in “mock” mode with local data to preview the UI without the rest of the stack.
 - **API gateway:** Node (Express). Serves games, levels, runs, votes, and user profile endpoints; forwards recompute requests to the Python service; placeholders for OAuth login/callback.
 - **Analysis / scoring:** Python (FastAPI). Computes DI as 40% rank score, 10% clears score, 50% community vote (weighted by voter clears in game); fallback 80% rank + 20% clears when there are no votes. Writes "objective DI" back to the database. Includes a daily sync stub to refresh levels from the external lists.
 - **Database:** PostgreSQL. Schema for games, source lists, levels (with computed DI fields), users, runs, placement votes, and sync job bookkeeping.
