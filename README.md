@@ -1,4 +1,4 @@
-# APEXLIST
+# Apexlist
 
 A **unified difficulty index** for hard games: one cross-game tier list that merges community “hardest clears” leaderboards (Eternal Towers of Hell, Geometry Dash, Celeste) into a single, comparable ranking.
 
